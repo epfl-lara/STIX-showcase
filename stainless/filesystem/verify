@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# kill subprocesses on exit or kill
+trap '[ -n "$(jobs -pr)" ] && kill -9 $(jobs -pr)' SIGINT SIGTERM EXIT
+
+stainless definitions/*.scala ./*.scala \
+  -J-Xss100M --batched "--solvers=smt-z3,no-inc:smt-z3,no-inc:smt-z3:z3 sat.euf=true" \
+  --infer-measures=false --timeout=120 --compact "$@"
