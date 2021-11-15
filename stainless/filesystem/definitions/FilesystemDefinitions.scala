@@ -33,7 +33,11 @@ object FilesystemDefinitions {
   @inline @cCode.inline val NUMBER_OF_CONTROL_BLOCKS_B = ((FLASH_BLOCKS_PER_MCM - OFFSET_OF_FIRST_CONTROL_BLOCK_B) / FILES_PER_FILECB) // 545 File CBs
   // number of all control block (whole flash)
   @inline @cCode.inline val TOTAL_NUMBER_OF_CONTROL_BLOCKS = NUMBER_OF_CONTROL_BLOCKS_A + NUMBER_OF_CONTROL_BLOCKS_B // 1090 File CBs
+  // theoretical maximum of files that can be written
+  @inline @cCode.inline val MAX_NUMBER_OF_FILES: UInt32 = TOTAL_NUMBER_OF_CONTROL_BLOCKS * FILES_PER_FILECB // 65'400 Files
 
+
+  @inline @cCode.inline val BITS_IN_INT32: UInt32 = 32
 
   @cCode.export
   case class MemFilesystem_filetype_e(partitionNumber: UInt8) {
