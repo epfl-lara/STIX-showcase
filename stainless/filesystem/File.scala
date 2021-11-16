@@ -38,7 +38,7 @@ object File {
     }
   )
 
-  @inlineOnce @opaque
+  @cCode.export @inlineOnce @opaque
   private def setBlockAsFree(cbIdx: Int, blockNumber: UInt32)(implicit memFSContext: MemFilesystemContext, flashContext: FlashContext) = {
     require(blockNumber < FILES_PER_FILECB)
     require(0 <= cbIdx && cbIdx < TOTAL_NUMBER_OF_CONTROL_BLOCKS.toInt)
