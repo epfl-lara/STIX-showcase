@@ -1,3 +1,5 @@
+/* Copyright 2021 Ateleris GmbH, Brugg */
+
 package filesystem
 
 import stainless.math.BitVectors._

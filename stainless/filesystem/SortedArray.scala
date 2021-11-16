@@ -1,3 +1,5 @@
+/* Copyright 2021 EPFL, Lausanne */
+
 package filesystem
 
 import stainless.lang.{BooleanDecorations, decreases, ghost, swap, old}
