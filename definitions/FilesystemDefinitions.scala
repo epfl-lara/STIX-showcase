@@ -1,6 +1,6 @@
 /* Copyright 2021 Ateleris GmbH, Brugg */
 
-package filesystem.definitions
+package definitions
 
 import stainless.math.BitVectors._
 import stainless.annotation._

@@ -1,7 +1,5 @@
 /* Copyright 2021 EPFL, Lausanne */
 
-package filesystem
-
 import stainless.annotation._
 import stainless.lang._
 

@@ -5,4 +5,4 @@ trap '[ -n "$(jobs -pr)" ] && kill -9 $(jobs -pr)' SIGINT SIGTERM EXIT
 
 stainless contexts/*.scala definitions/*.scala ./*.scala \
   -J-Xss100M --batched "--solvers=smt-z3,no-inc:smt-z3,no-inc:smt-z3:z3 sat.euf=true" \
-  --infer-measures=false --timeout=120 --compact "$@"
+  --infer-measures=false --timeout=120 "$@"

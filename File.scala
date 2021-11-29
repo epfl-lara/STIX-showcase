@@ -1,11 +1,9 @@
 /* Copyright 2021 Ateleris GmbH, Brugg */
 
-package filesystem
-
-import filesystem.contexts._
-import filesystem.definitions.FilesystemDefinitions._
-import filesystem.definitions.PartitionDefinitions._
-import filesystem.BlockCountInvariant._
+import contexts._
+import definitions.FilesystemDefinitions._
+import definitions.PartitionDefinitions._
+import BlockCountInvariant._
 import stainless.annotation._
 import stainless.lang.StaticChecks.{assert => assert2, _}
 import stainless.lang.{BooleanDecorations, ghost, old, snapshot, unfold}

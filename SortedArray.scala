@@ -1,7 +1,5 @@
 /* Copyright 2021 EPFL, Lausanne */
 
-package filesystem
-
 import stainless.lang.{BooleanDecorations, decreases, ghost, swap, old}
 import stainless.lang.StaticChecks._
 import stainless.math._

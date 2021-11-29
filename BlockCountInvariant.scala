@@ -1,10 +1,8 @@
 /* Copyright 2021 Ateleris GmbH, Brugg */
 
-package filesystem
-
 import definitions.FilesystemDefinitions._
 import definitions.PartitionDefinitions._
-import filesystem.contexts.FlashContext
+import contexts.FlashContext
 import stainless.annotation._
 import stainless.lang._
 import stainless.math.BitVectors.{max => _, _}

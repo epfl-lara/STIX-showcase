@@ -1,9 +1,9 @@
 /* Copyright 2021 Ateleris GmbH, Brugg */
 
-package filesystem.contexts
+package contexts
 
-import filesystem.definitions.FilesystemDefinitions._
-import filesystem.definitions.PartitionDefinitions._
+import definitions.FilesystemDefinitions._
+import definitions.PartitionDefinitions._
 import stainless.annotation._
 import stainless.lang.StaticChecks._
 

@@ -1,6 +1,6 @@
 /* Copyright 2021 Ateleris GmbH, Brugg */
 
-package filesystem.definitions
+package definitions
 
 import FilesystemDefinitions._
 import stainless.lang.BooleanDecorations

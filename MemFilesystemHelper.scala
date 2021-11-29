@@ -1,13 +1,11 @@
 /* Copyright 2021 Ateleris GmbH, Brugg */
 
-package filesystem
-
 import stainless.annotation._
 import stainless.lang.{BooleanDecorations, decreases, ghost, old}
 import stainless.lang.StaticChecks._
 import stainless.math.BitVectors._
 import definitions.FilesystemDefinitions._
-import filesystem.SortedArray.{isSorted, isSortedRange}
+import SortedArray.{isSorted, isSortedRange}
 
 
 object MemFilesystemHelper {
