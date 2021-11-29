@@ -23,5 +23,5 @@ The resulting C files can be found in the [gen](https://github.com/epfl-lara/STI
 * Ateleris GmbH Website: https://www.ateleris.ch/
 
 ## License
-Stainless is released under the Apache 2.0 license. 
+This repository is released under the Apache 2.0 license. 
 See the [LICENSE](https://github.com/epfl-lara/STIX-showcase/blob/master/LICENSE) file for more information.
