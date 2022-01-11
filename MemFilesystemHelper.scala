@@ -98,7 +98,7 @@ object MemFilesystemHelper {
     ()
   }
 
-  @opaque @inlineOnce
+  @cCode.export @opaque @inlineOnce
   def insertIntoPrioQueue(queue: PriorityQueue, time: TimingSCET, elem: QueueElement): Boolean = {
     require(queue.length > 0)
     require(time.coarse <= max[UInt32] / 2)
