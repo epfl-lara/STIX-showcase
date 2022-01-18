@@ -1,23 +1,38 @@
 # From Verified Scala to STIX File System Embedded Code using Stainless
-Case-study driven adaptation of Stainless from a verifier 
-originally focused on functional programs to a system that can be used 
-to develop high-assurance embedded software. A public benchmark that 
-can be used to validate other such approaches in the future.
+
+This repository contains a small public fragment of the case
+study we used to evaluate the use of Stainless to construct
+high-assurance embedded software.
+
+There are two aspects that this case study evaluates:
+  * generating C code from Stainless (genc)
+  * verifying such lower-level imperative code
 
 ## Prerequisites
+
 Stainless: https://epfl-lara.github.io/stainless/installation.html
 
-## run verification
-To run the verification:\
-``./verify``
+It should run with versions such as 0.9.1.
 
-## generate C-code
-To generate C-code from Scala:\
-``./compile``
+## Invoke formal verification
 
-The resulting C files can be found in the [gen](https://github.com/epfl-lara/STIX-showcase/tree/master/gen) folder.
+To run the verification task:\
+[./verify](verify)
 
-You can check `setBlockAsFree` function `File.scala`. The generated code is in `gen/esover.c` with the C function named the same.
+## Generate C-code
+
+To generate C-code from Scala using genc functionality of stainless: \
+[./compile](compile)
+
+The resulting C files is also committed to the repository and 
+can be found in the [gen](gen/) folder.
+
+To get some flavor of properties proven, consider the function
+[setBlockAsFree](File.scala#L42) in the Scala source code [File.scala](File.scala). 
+Among the interesting properties that we prove is the invariant [blockCountInvariant](File.scala#L130), which
+is defined in [BlockCountInvariant.scala](BlockCountInvariant.scala#L55) in terms of executable recursive Scala function [countStatusFrom](BlockCountInvariant.scala#L14).
+
+The corresponding generated code for the entire fragment is in [gen/esover.c](gen/esover.c#L142) file with the C function named the same. In the context of the full case study, the generate code, along with certain bridge functions, compiles as a drop-in replacement for parts of the existing C implementation of the file system and exhibits similar performance as the original code (in some cases running faster, in some cases slower due to decisions taken by the C compiler), and with very similar code sizes.
 
 ## Other Links
 * Stainless Website: https://stainless.epfl.ch
