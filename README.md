@@ -17,21 +17,21 @@ It should run with versions such as 0.9.1.
 ## Invoke formal verification
 
 To run the verification task:\
-``./verify``
+[./verify](verify)
 
 ## Generate C-code
 
-To generate C-code from Scala using genc functionality of stainless:
-``./compile``
+To generate C-code from Scala using genc functionality of stainless: \
+[./compile](compile)
 
 The resulting C files is also committed to the repository and 
 can be found in the [gen](gen/) folder.
 
 To get some flavor of properties proven, you can examine the function
 `setBlockAsFree` in the file [File.scala](File.scala). 
-The generated code is in [gen/esover.c](gen/esover.c) file with the C function named the same.
+The generated code is in [gen/esover.c](gen/esover.c#L142) file with the C function named the same.
 Among the interesting properties that we prove is the invariant `blockCountInvariant`, which
-is defined as a recursive Scala function in [src/BlockCountInvariant.scala].
+is defined as a recursive Scala function in [BlockCountInvariant.scala](BlockCountInvariant.scala#L55).
 
 ## Other Links
 * Stainless Website: https://stainless.epfl.ch
