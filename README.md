@@ -19,7 +19,7 @@ It should run with versions such as 0.9.1.
 To run the verification task:\
 [./verify](verify)
 
-## Generate C-code
+## Generate C code
 
 To generate C-code from Scala using genc functionality of stainless: \
 [./compile](compile)
