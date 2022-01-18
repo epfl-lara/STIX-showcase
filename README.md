@@ -1,23 +1,37 @@
 # From Verified Scala to STIX File System Embedded Code using Stainless
-Case-study driven adaptation of Stainless from a verifier 
-originally focused on functional programs to a system that can be used 
-to develop high-assurance embedded software. A public benchmark that 
-can be used to validate other such approaches in the future.
+
+This repository contains a small public fragment of the case
+study we used to evaluate the use of Stainless to construct
+high-assurance embedded software.
+
+There are two aspects that this case study evaluates:
+  * generating C code from Stainless (genc)
+  * verifying such lower-level imperative code
 
 ## Prerequisites
+
 Stainless: https://epfl-lara.github.io/stainless/installation.html
 
-## run verification
-To run the verification:\
+It should run with versions such as 0.9.1.
+
+## Invoke formal verification
+
+To run the verification task:\
 ``./verify``
 
-## generate C-code
-To generate C-code from Scala:\
+## Generate C-code
+
+To generate C-code from Scala using genc functionality of stainless:
 ``./compile``
 
-The resulting C files can be found in the [gen](https://github.com/epfl-lara/STIX-showcase/tree/master/gen) folder.
+The resulting C files is also committed to the repository and 
+can be found in the [gen](gen/) folder.
 
-You can check `setBlockAsFree` function `File.scala`. The generated code is in `gen/esover.c` with the C function named the same.
+To get some flavor of properties proven, you can examine the function
+`setBlockAsFree` in the file [File.scala](File.scala). 
+The generated code is in [gen/esover.c](gen/esover.c) file with the C function named the same.
+Among the interesting properties that we prove is the invariant `blockCountInvariant`, which
+is defined as a recursive Scala function in [src/BlockCountInvariant.scala].
 
 ## Other Links
 * Stainless Website: https://stainless.epfl.ch
