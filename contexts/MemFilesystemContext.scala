@@ -10,7 +10,7 @@ import stainless.lang.StaticChecks._
 object MemFilesystemContainer {
 
 }
-@inlineInvariant @cCode.export
+@inlineInvariant @cCode.`export`
 case class MemFilesystemContainer(
                                   val controlBlocks: Array[FileControlBlock]
                             ) {
