@@ -27,11 +27,12 @@ To generate C-code from Scala using genc functionality of stainless: \
 The resulting C files is also committed to the repository and 
 can be found in the [gen](gen/) folder.
 
-To get some flavor of properties proven, you can examine the function
-`setBlockAsFree` in the file [File.scala](File.scala). 
-The generated code is in [gen/esover.c](gen/esover.c#L142) file with the C function named the same.
-Among the interesting properties that we prove is the invariant `blockCountInvariant`, which
+To get some flavor of properties proven, consider the function
+[setBlockAsFree](File.scala#L42) in the Scala source code [File.scala](File.scala). 
+Among the interesting properties that we prove is the invariant [blockCountInvariant](File.scala#L130), which
 is defined as a recursive Scala function in [BlockCountInvariant.scala](BlockCountInvariant.scala#L55).
+
+The corresponding generated code for the entire fragment is in [gen/esover.c](gen/esover.c#L142) file with the C function named the same. In the context of the full case study, the generate code, along with certain bridge functions, compiles as a drop-in replacement for parts of the existing C implementation of the file system and exhibits similar performance as the original code (in some cases running faster, in some cases slower due to decisions taken by the C compiler), and with very similar code sizes.
 
 ## Other Links
 * Stainless Website: https://stainless.epfl.ch
