@@ -10,18 +10,18 @@ import stainless.math.BitVectors._
 
 
 object PartitionDefinitions {
-  @cCode.export
+  @cCode.`export`
   case class File_blockStatus_e(status: UInt8) {
     require(0 <= status && status <= 4)
   }
 
-  @inline @cCode.define @cCode.export val E_FILE_BLOCK_STAT_UNKNOWN = File_blockStatus_e(0)
-  @inline @cCode.define @cCode.export val E_FILE_BLOCK_STAT_FREE    = File_blockStatus_e(1)
-  @inline @cCode.define @cCode.export val E_FILE_BLOCK_STAT_FILE    = File_blockStatus_e(2)
-  @inline @cCode.define @cCode.export val E_FILE_BLOCK_STAT_ERROR   = File_blockStatus_e(3)
-  @inline @cCode.define @cCode.export val E_FILE_BLOCK_STAT_BAD     = File_blockStatus_e(4)
+  @inline @cCode.define @cCode.`export` val E_FILE_BLOCK_STAT_UNKNOWN = File_blockStatus_e(0)
+  @inline @cCode.define @cCode.`export` val E_FILE_BLOCK_STAT_FREE    = File_blockStatus_e(1)
+  @inline @cCode.define @cCode.`export` val E_FILE_BLOCK_STAT_FILE    = File_blockStatus_e(2)
+  @inline @cCode.define @cCode.`export` val E_FILE_BLOCK_STAT_ERROR   = File_blockStatus_e(3)
+  @inline @cCode.define @cCode.`export` val E_FILE_BLOCK_STAT_BAD     = File_blockStatus_e(4)
 
-  @cCode.export
+  @cCode.`export`
   case class FileCatalogNode(var blockStatus: File_blockStatus_e) { }
 
   object FileControlBlock {
@@ -37,7 +37,7 @@ object PartitionDefinitions {
 
   }
 
-  @inlineInvariant @cCode.export
+  @inlineInvariant @cCode.`export`
   case class FileControlBlock(
                                var controlBlockNumber: UInt32, // cb index in memFilesystemContainer
 

@@ -41,7 +41,7 @@ object FilesystemDefinitions {
 
   @inline @cCode.inline val BITS_IN_INT32: UInt32 = 32
 
-  @cCode.export
+  @cCode.`export`
   case class MemFilesystem_filetype_e(partitionNumber: UInt8) {
     require(0 <= partitionNumber && partitionNumber <= 9)
   }
@@ -49,14 +49,14 @@ object FilesystemDefinitions {
   @inline
   implicit def filetype_identity(fileType: MemFilesystem_filetype_e): UInt8 = fileType.partitionNumber
 
-  @inline @cCode.define @cCode.export val E_MEMFILESYSTEM_FILETYPE_FIRST = MemFilesystem_filetype_e(0)
-  @inline @cCode.define @cCode.export val E_MEMFILESYSTEM_FILETYPE_ASPECT = MemFilesystem_filetype_e(1)
-  @inline @cCode.define @cCode.export val E_MEMFILESYSTEM_FILETYPE_RAW_COUNTS = MemFilesystem_filetype_e(2)
-  @inline @cCode.define @cCode.export val E_MEMFILESYSTEM_FILETYPE_TMMGMT = MemFilesystem_filetype_e(3)
-  @inline @cCode.define @cCode.export val E_MEMFILESYSTEM_FILETYPE_FLARE = MemFilesystem_filetype_e(4)
-  @inline @cCode.define @cCode.export val E_MEMFILESYSTEM_FILETYPE_USER_REQUESTS= MemFilesystem_filetype_e(5)
-  @inline @cCode.define @cCode.export val E_MEMFILESYSTEM_FILETYPE_CONTEXT0 = MemFilesystem_filetype_e(6)
-  @inline @cCode.define @cCode.export val E_MEMFILESYSTEM_FILETYPE_CONTEXT1 = MemFilesystem_filetype_e(7)
-  @inline @cCode.define @cCode.export val E_MEMFILESYSTEM_FILETYPE_LUT = MemFilesystem_filetype_e(8)
-  @inline @cCode.define @cCode.export val E_MEMFILESYSTEM_FILETYPE_LAST = MemFilesystem_filetype_e(9)
+  @inline @cCode.define @cCode.`export` val E_MEMFILESYSTEM_FILETYPE_FIRST = MemFilesystem_filetype_e(0)
+  @inline @cCode.define @cCode.`export` val E_MEMFILESYSTEM_FILETYPE_ASPECT = MemFilesystem_filetype_e(1)
+  @inline @cCode.define @cCode.`export` val E_MEMFILESYSTEM_FILETYPE_RAW_COUNTS = MemFilesystem_filetype_e(2)
+  @inline @cCode.define @cCode.`export` val E_MEMFILESYSTEM_FILETYPE_TMMGMT = MemFilesystem_filetype_e(3)
+  @inline @cCode.define @cCode.`export` val E_MEMFILESYSTEM_FILETYPE_FLARE = MemFilesystem_filetype_e(4)
+  @inline @cCode.define @cCode.`export` val E_MEMFILESYSTEM_FILETYPE_USER_REQUESTS= MemFilesystem_filetype_e(5)
+  @inline @cCode.define @cCode.`export` val E_MEMFILESYSTEM_FILETYPE_CONTEXT0 = MemFilesystem_filetype_e(6)
+  @inline @cCode.define @cCode.`export` val E_MEMFILESYSTEM_FILETYPE_CONTEXT1 = MemFilesystem_filetype_e(7)
+  @inline @cCode.define @cCode.`export` val E_MEMFILESYSTEM_FILETYPE_LUT = MemFilesystem_filetype_e(8)
+  @inline @cCode.define @cCode.`export` val E_MEMFILESYSTEM_FILETYPE_LAST = MemFilesystem_filetype_e(9)
 }

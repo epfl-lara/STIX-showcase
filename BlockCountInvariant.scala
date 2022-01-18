@@ -40,7 +40,7 @@ object BlockCountInvariant {
     (cbIdx == TOTAL_NUMBER_OF_CONTROL_BLOCKS.toInt - 1 ==>
       res.toInt <= FILES_PER_FILECB.toInt - blockNumber) &&&
     (cbIdx == TOTAL_NUMBER_OF_CONTROL_BLOCKS.toInt ==>
-      (res == 0))
+      (res == (0 : UInt32)))
   )
 
   @ghost @pure @opaque

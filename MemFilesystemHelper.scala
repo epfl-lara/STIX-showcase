@@ -78,7 +78,7 @@ object MemFilesystemHelper {
     to, QueueElement(0, 0, to.coarse, to.fine, 0)
   ), TimingComparison.TimingSCETOrder))
 
-  @cCode.export @inline @cCode.inline
+  @cCode.`export` @inline @cCode.inline
   def initPrioQueue(l: Int, to: TimingSCET, from: TimingSCET): Unit = {
     require(l > 0)
     require(l < SortedArray.sizeLimit)
@@ -98,7 +98,7 @@ object MemFilesystemHelper {
     ()
   }
 
-  @cCode.export @opaque @inlineOnce
+  @cCode.`export` @opaque @inlineOnce
   def insertIntoPrioQueue(queue: PriorityQueue, time: TimingSCET, elem: QueueElement): Boolean = {
     require(queue.length > 0)
     require(time.coarse <= max[UInt32] / 2)
