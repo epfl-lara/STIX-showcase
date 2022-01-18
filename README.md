@@ -17,6 +17,8 @@ To generate C-code from Scala:\
 
 The resulting C files can be found in the [gen](https://github.com/epfl-lara/STIX-showcase/tree/master/gen) folder.
 
+You can check `setBlockAsFree` function `File.scala`. The generated code is in `gen/esover.c` with the C function named the same.
+
 ## Other Links
 * Stainless Website: https://stainless.epfl.ch
 * EPFL-LARA Website: https://lara.epfl.ch/w/
